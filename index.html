@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <h1>Scheduling Algorithms (Group 42)</h1>
+  <meta charset="UTF-8">
+  <title>Group 42 OS Project</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div>
+  <div>
+    Select the Algorithm:
+    <form id="algorithm">
+      <input type="radio" name="algorithm" value="fcfs" checked/> FCFS<br/>
+      <input type="radio" name="algorithm" value="sjf"/> SJF<br/>
+      <input type="radio" name="algorithm" value="priority"/> Priority scheduling<br/>
+      <input type="radio" name="algorithm" value="robin"/> Round Robin
+    </form>
+    <br>
+  </div>
+    <table id="inputTable">
+        <tr>
+            <th>Process</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+            <th class="servtime">Waiting Time</th>
+            <th class="priority-only">Priority</th>
+        </tr>
+        <tr>
+            <td>P0</td>
+            <td>0</td>
+            <td><input class="initial exectime" type="text"></td>
+            <td class="servtime"></td>
+            <td class="priority-only initial"><input type="text"/></td>
+        </tr>
+        
+    </table>
+    <input id="minus" type="button" value="delete" onclick="deleteRow();">
+    </div>
+    <input type="button" value="add" onclick="addRow();">
+<div>
+  </div>    
+    <p id="quantumParagraph" hidden>Quantum: 
+        <input style="width: 50px;" id="quantum" type="text" value="3" />
+    </p>
+    <input type="button" value="Go" onclick="draw();" />
+    <br/><br/>
+
+    <fresh>
+    </fresh>
+    <p>
+    Timer: <strong id="timer"></strong> sec
+    </p>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
